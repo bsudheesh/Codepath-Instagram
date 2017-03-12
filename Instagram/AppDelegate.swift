@@ -7,15 +7,48 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "myAppId"
+                configuration.clientKey = "arsenal1"  // set to nil assuming you have not set clientKey
+                configuration.server = "http://howardinsta.herokuapp.com/parse"
+            })
+        )
+        
+        if PFUser.current() != nil{
+            print("There is a current user")
+            let storyBoard = UIStoryboard(name : "Main", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeNavigationController")
+            window?.rootViewController = viewController //root view controller
+            
+        }
+        else{
+            print("No Current user")
+        }
+        
+        //UserDidLogOut
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UserDidLogOut" ), object: nil, queue: OperationQueue.main) {(NSNotification)->Void in //the logout button information is received here
+            
+            print("Inside the change app delegate")
+            let storyBoard = UIStoryboard(name : "Main", bundle: nil)
+            let viewController = storyBoard.instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+            
+        }
+        
+        
         return true
     }
 

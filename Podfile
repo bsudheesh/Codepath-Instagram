@@ -7,4 +7,5 @@ target ‘Instagram’ do
 
   # Pods for ParseChat
   pod ‘Parse’
+  pod ‘ParseUI’
 end

@@ -18,6 +18,7 @@
 		FE3D9BA71E76189A00100C81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D9BA61E76189A00100C81 /* ProfileViewController.swift */; };
 		FE3D9BA91E7618D000100C81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D9BA81E7618D000100C81 /* HomeViewController.swift */; };
 		FE3D9BAB1E76262A00100C81 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D9BAA1E76262A00100C81 /* Post.swift */; };
+		FE3D9BAD1E76357B00100C81 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D9BAC1E76357B00100C81 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FE3D9BA61E76189A00100C81 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FE3D9BA81E7618D000100C81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE3D9BAA1E76262A00100C81 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FE3D9BAC1E76357B00100C81 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				FE3D9BA41E760DD300100C81 /* ShareViewController.swift */,
 				FE3D9BA61E76189A00100C81 /* ProfileViewController.swift */,
 				FE3D9BA81E7618D000100C81 /* HomeViewController.swift */,
+				FE3D9BAC1E76357B00100C81 /* HomeTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				FE3D9BA51E760DD300100C81 /* ShareViewController.swift in Sources */,
 				FE3D9B901E760AA200100C81 /* AppDelegate.swift in Sources */,
 				FE3D9BAB1E76262A00100C81 /* Post.swift in Sources */,
+				FE3D9BAD1E76357B00100C81 /* HomeTableViewCell.swift in Sources */,
 				FE3D9BA91E7618D000100C81 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
 
 class ShareViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -65,15 +66,18 @@ class ShareViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
+         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         Post.postUserImage(image: postPhotoLabel.image,
                            withCaption: captionTextFiled.text,
                            withCompletion: { _ in
+                           //s MBProgressHUD.showAdded(to: self.view, animated: true)
                             DispatchQueue.main.async {
                                 self.postPhotoLabel.image = nil
                                 self.captionTextFiled.text = nil
-                                
+                                MBProgressHUD.hide(for: self.view, animated: true)
                             }}
+                
         )
        
         //Post.postUserImage(image: postPhotoLabel.image, withCaption: captionTextFiled.text, withCompletion: PFBooleanResultBlock?)

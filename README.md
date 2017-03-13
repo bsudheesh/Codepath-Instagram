@@ -43,7 +43,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
 
-Icon from www.flaticon.com
+Icon from www.flaticon.com.
 Heroku (https://www.heroku.com) - Data storage cloud
 
 ## Notes

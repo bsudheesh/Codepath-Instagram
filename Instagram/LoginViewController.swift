@@ -34,6 +34,22 @@ class LoginViewController: UIViewController {
                 print("User logined")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
+            else{
+                let alertController = UIAlertController(title: "ERROR", message: "INVALID VALUES", preferredStyle: .alert)
+                
+                
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                }
+                // add the cancel action to the alertController
+                alertController.addAction(cancelAction)
+                
+                
+                self.present(alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
+
+            }
         }
     }
     
@@ -47,6 +63,18 @@ class LoginViewController: UIViewController {
             (succeeded: Bool, error:Error?) -> Void in
             if succeeded {
                 print("Created a user")
+                let alertController = UIAlertController(title: "WELCOME", message: "Welcome to Chat", preferredStyle: .alert)
+                
+                
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+                    
+                }
+                alertController.addAction(cancelAction)
+                
+                
+                self.present(alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
             else{
